@@ -1,0 +1,241 @@
+:root {
+    --main-color: #2ab9d5;
+    --main-color-darker: #1b788b;
+    --logo-shadow-color: #aaaaaa22;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.small-icon
+{
+    height: 3em;
+}
+
+.bg-main{
+    background-color: var(--main-color);
+}
+
+.header > *{
+    margin-bottom: 0.5em;
+}
+
+.post > *{
+    margin-bottom: 0.5em;
+}
+
+#text-content {
+    white-space: pre-line;
+}
+
+@media (min-width: 576px) {
+    .container-fluid-sm {
+        width: 100%
+    }
+}
+
+.carousel .carousel-inner .carousel-item img {
+    aspect-ratio: 3;
+    object-fit: contain;
+    min-width: auto;
+    margin: auto;
+ }
+
+.pub-title {
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.pub-poster {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.user-rounded-border {
+    border-radius: 100%;
+    border: solid 3px var(--main-color);
+}
+
+#map { height: 100%; }
+
+.no-focus {
+    outline: none;
+}
+
+a:link {
+    color: var(--main-color);
+}
+
+a:visited {
+    color: var(--main-color-darker);
+}
+
+.center-flex {
+    margin: auto;
+}
+
+.center-flex > *:first-child {
+    margin-top: auto;
+}
+
+a.no-underline {
+    text-decoration: none !important;
+}
+
+.center-flex > *:last-child {
+    margin-bottom: auto;
+}
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
+.accordion-button{
+    padding: 0.5em;
+}
+
+.participant-list .participant-item{
+
+    margin-right: -0.825em;
+}
+
+.participant-item {
+    background-color: white;
+    height: 2.5em;
+    width: 2.5em;
+    border: solid 3px var(--main-color);
+    border-radius: 50px;
+}
+
+.feed {
+    height: auto;
+}
+
+.bg-feed{
+    background-color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.text-main {
+    color: var(--main-color);
+}
+
+.btn-main {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.btn-main:hover {
+    background-color: var(--main-color-darker);
+    color: white;
+}
+
+#loadingScreen {
+    cursor : wait;
+    position : fixed;
+    z-index: 9999;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    top : 0;
+    left : 0;
+    height : 100%;
+    width : 100%;
+}
+
+#loadingScreen > * {
+    animation: 0.25s fade-in;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.rounded-5 {
+    border-radius: 10px !important;
+}
+
+.round-input {
+    border-radius: 25px !important;
+}
+
+.inside-btn {
+    transform: scale(0.8);
+}
+
+.brand {
+    font-size: 4em;
+    font-weight: 600;
+}
+
+.brand-small
+{
+    font-size: 1.75em;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.tracking-in-expand {
+    animation: tracking-in-expand 1.75s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.slide-in-blurred-bottom {
+    max-height: 45em;
+    animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.25s both;
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+        letter-spacing: 0;
+    }
+
+    60% {
+        transform: translateY(0);
+        transform-origin: 50% 50%;
+        text-shadow: none;
+    }
+
+    100% {
+        transform: translateY(-10px);
+        transform-origin: 50% 50%;
+        text-shadow: 0 1px 0 var(--logo-shadow-color), 0 2px 0 var(--logo-shadow-color), 0 3px 0 var(--logo-shadow-color), 0 4px 0 var(--logo-shadow-color), 0 5px 0 var(--logo-shadow-color), 0 6px 0 var(--logo-shadow-color), 0 7px 0 var(--logo-shadow-color), 0 8px 0 var(--logo-shadow-color), 0 9px 0 var(--logo-shadow-color);
+    }
+}
+
+@keyframes slide-in-blurred-bottom {
+    0% {
+        transform: scaleY(0);
+        margin: 0;
+        font-size: 0;
+        padding: 0;
+        max-height: 0;
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
