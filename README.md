@@ -1,4 +1,4 @@
-# Porjets
+# Projets
 Exposition des différents projets réalisés
 
 Voici les différents projets que j'ai réalisé au cours de ma scolarités.
