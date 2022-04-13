@@ -1,0 +1,581 @@
+<! Morpion royal>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> Morpion royal</title>
+<script>
+var pion = []		<!--matrice pour le test-->
+	for (i = 11 ; i < 100 ; ++i){	
+		pion[i]=0
+	
+	}
+	
+var testi = []		<!--matrice pour le gdtest-->
+	for (i = 1 ; i < 10 ; ++i){	
+		testi[i]=0
+		}		
+j = 1 
+C = 0
+fin = 0
+gagnant = 0 		<!--permet de donner le numéro du gagnat pour le tableau des scores-->
+
+function clique(x,y){
+if (fin==0){		<!--permet de bloquer le jeu lorsque la partie est gagnée-->
+	if ((C==x)||(C==0)){		<!--permet de jouer seulement dans les cases autorisées-->
+		document.getElementById(x+'-'+y).style.visibility='hidden'
+		document.getElementById(x+''+y).innerHTML= "<img src='joueur"+j+".jpg' />"		<!--insère l'image correspondant au pion du joueur-->
+		z=x*10+y
+		pion[z]=j
+		test(x,y,j)
+		C = y
+		if (testi[C]!=0){
+		C = 0
+		}
+		gdtest()
+		affichage(C)
+		if (j==1){				<!--change le joueur en fin de tour-->
+			j=5
+		}	
+		else{
+			j=1
+		}
+		}
+	
+}
+}
+function test(x,y,j){				<!--test pour savoir si un petit morpion a été gagné, eet si oui par quel joueur-->
+	for (i = 1 ; i < 10; ++i){		<!--le principe est d'additionner les valeurs de trois cases pour savoir si un joueur les possède toutes les 3-->
+		if (testi[i]==0){
+			if (pion[i*10+1]+pion[i*10+2]+pion[i*10+3]==3){ 		<!--ici on additione les valeurs de la ligne du haut de chaque petit morpion : si cette somme est égale à 3 (=1+1+1) alors ce morpion est gagné par le joueur 1-->
+			testi[i]=1
+			document.getElementById('case'+i).innerHTML= "<img src='grcase"+j+".jpg' />"
+			document.getElementById('case'+i).style.visibility="visible"
+			}
+		if (pion[i*10+4]+pion[i*10+5]+pion[i*10+6]==3){
+			testi[i]=1
+			document.getElementById('case'+i).innerHTML= "<img src='grcase"+j+".jpg' />"
+			document.getElementById('case'+i).style.visibility="visible"
+			}
+		if (pion[i*10+7]+pion[i*10+8]+pion[i*10+9]==3){
+			testi[i]=1
+			document.getElementById('case'+i).innerHTML= "<img src='grcase"+j+".jpg' />"
+			document.getElementById('case'+i).style.visibility="visible"
+			}
+		if (pion[i*10+1]+pion[i*10+4]+pion[i*10+7]==3){
+			testi[i]=1
+			document.getElementById('case'+i).innerHTML= "<img src='grcase"+j+".jpg' />"
+			document.getElementById('case'+i).style.visibility="visible"
+			}
+		if (pion[i*10+2]+pion[i*10+5]+pion[i*10+8]==3){
+			testi[i]=1
+			document.getElementById('case'+i).innerHTML= "<img src='grcase"+j+".jpg' />"
+			document.getElementById('case'+i).style.visibility="visible"
+			}
+		if (pion[i*10+3]+pion[i*10+6]+pion[i*10+9]==3){
+			testi[i]=1
+			document.getElementById('case'+i).innerHTML= "<img src='grcase"+j+".jpg' />"
+			document.getElementById('case'+i).style.visibility="visible"
+			}
+		if (pion[i*10+1]+pion[i*10+5]+pion[i*10+9]==3){
+			testi[i]=1
+			document.getElementById('case'+i).innerHTML= "<img src='grcase"+j+".jpg' />"
+			document.getElementById('case'+i).style.visibility="visible"
+			}
+		if (pion[i*10+3]+pion[i*10+5]+pion[i*10+7]==3){
+			testi[i]=1
+			document.getElementById('case'+i).innerHTML= "<img src='grcase"+j+".jpg' />"
+			document.getElementById('case'+i).style.visibility="visible"
+			}
+	
+	
+		if (pion[i*10+1]+pion[i*10+2]+pion[i*10+3]==15){ 		<!--ici on refait la première ligne mais le deuxième joueur : dans ce cas la somme doit être égale à 15 (=5+5+5)-->
+			testi[i]=5
+			document.getElementById('case'+i).innerHTML= "<img src='grcase"+j+".jpg' />"
+			document.getElementById('case'+i).style.visibility="visible"
+			}
+		if (pion[i*10+4]+pion[i*10+5]+pion[i*10+6]==15){
+			testi[i]=5
+			document.getElementById('case'+i).innerHTML= "<img src='grcase"+j+".jpg' />"
+			document.getElementById('case'+i).style.visibility="visible"
+			}
+		if (pion[i*10+7]+pion[i*10+8]+pion[i*10+9]==15){
+			testi[i]=5
+			document.getElementById('case'+i).innerHTML= "<img src='grcase"+j+".jpg' />"
+			document.getElementById('case'+i).style.visibility="visible"
+			}
+		if (pion[i*10+1]+pion[i*10+4]+pion[i*10+7]==15){
+			testi[i]=5
+			document.getElementById('case'+i).innerHTML= "<img src='grcase"+j+".jpg' />"
+			document.getElementById('case'+i).style.visibility="visible"
+			}
+		if (pion[i*10+2]+pion[i*10+5]+pion[i*10+8]==15){
+			testi[i]=5
+			document.getElementById('case'+i).innerHTML= "<img src='grcase"+j+".jpg' />"
+			document.getElementById('case'+i).style.visibility="visible"
+			}
+		if (pion[i*10+3]+pion[i*10+6]+pion[i*10+9]==15){
+			testi[i]=5	
+			document.getElementById('case'+i).innerHTML= "<img src='grcase"+j+".jpg' />"
+			document.getElementById('case'+i).style.visibility="visible"
+			}
+		if (pion[i*10+1]+pion[i*10+5]+pion[i*10+9]==15){
+			testi[i]=5	
+			document.getElementById('case'+i).innerHTML= "<img src='grcase"+j+".jpg' />"
+			document.getElementById('case'+i).style.visibility="visible"
+			}
+		if (pion[i*10+3]+pion[i*10+5]+pion[i*10+7]==15){
+			testi[i]=5
+			document.getElementById('case'+i).innerHTML= "<img src='grcase"+j+".jpg' />"
+			document.getElementById('case'+i).style.visibility="visible"
+			}
+
+		}
+	}
+}
+	
+function gdtest() { 		<!--même principe que la fonction test mais pour les grandes cases -->
+if (testi[1]+testi[2]+testi[3]==3){
+	document.getElementById('affichage').innerHTML = "Le Joueur 1 a gagné" 		<!--donne la victoire au joueur-->
+	fin = 1
+	gagnant = 1
+	document.getElementById('recommencer').style.visibility ="visible"
+	}
+if (testi[4]+testi[5]+testi[6]==3){
+	document.getElementById('affichage').innerHTML = "Le Joueur 1 a gagné"
+	fin = 1
+	gagnant = 1
+	document.getElementById('recommencer').style.visibility ="visible"
+	}
+if (testi[7]+testi[8]+testi[9]==3){
+	document.getElementById('affichage').innerHTML = "Le Joueur 1 a gagné"
+	fin = 1
+	gagnant = 1
+	document.getElementById('recommencer').style.visibility ="visible"
+	}
+if (testi[1]+testi[4]+testi[7]==3){
+	document.getElementById('affichage').innerHTML = "Le Joueur 1 a gagné"
+	fin = 1
+	gagnant = 1
+	document.getElementById('recommencer').style.visibility ="visible"
+	}
+if (testi[2]+testi[5]+testi[8]==3){
+	document.getElementById('affichage').innerHTML = "Le Joueur 1 a gagné"
+	fin = 1
+	gagnant = 1
+	document.getElementById('recommencer').style.visibility ="visible"
+	}
+if (testi[3]+testi[6]+testi[9]==3){
+	document.getElementById('affichage').innerHTML = "Le Joueur 1 a gagné"
+	fin = 1
+	gagnant = 1
+	document.getElementById('recommencer').style.visibility ="visible"
+	}
+if (testi[1]+testi[5]+testi[9]==3){
+	document.getElementById('affichage').innerHTML = "Le Joueur 1 a gagné"
+	fin = 1
+	gagnant = 1
+	document.getElementById('recommencer').style.visibility ="visible"
+	}
+if (testi[3]+testi[5]+testi[7]==3){
+	document.getElementById('affichage').innerHTML = "Le Joueur 1 a gagné"
+	fin = 1
+	gagnant = 1
+	document.getElementById('recommencer').style.visibility ="visible"
+	}
+
+	
+if (testi[1]+testi[2]+testi[3]==15){
+	document.getElementById('affichage').innerHTML = "Le Joueur 2 a gagné"
+	fin = 1
+	gagnant = 2
+	document.getElementById('recommencer').style.visibility ="visible"
+	}
+if (testi[4]+testi[5]+testi[6]==15){
+	document.getElementById('affichage').innerHTML = "Le Joueur 2 a gagné"
+	fin = 1
+	gagnant = 2
+	document.getElementById('recommencer').style.visibility ="visible"
+	}
+if (testi[7]+testi[8]+testi[9]==15){
+	document.getElementById('affichage').innerHTML = "Le Joueur 2 a gagné"
+	fin = 1
+	gagnant = 2
+	document.getElementById('recommencer').style.visibility ="visible"
+	}
+if (testi[1]+testi[4]+testi[7]==15){
+	document.getElementById('affichage').innerHTML = "Le Joueur 2 a gagné"
+	fin = 1
+	gagnant = 2
+	document.getElementById('recommencer').style.visibility ="visible"
+	}
+if (testi[2]+testi[5]+testi[8]==15){
+	document.getElementById('affichage').innerHTML = "Le Joueur 2 a gagné"
+	fin = 1
+	gagnant = 2
+	document.getElementById('recommencer').style.visibility ="visible"
+	}
+if (testi[3]+testi[6]+testi[9]==15){
+	document.getElementById('affichage').innerHTML = "Le Joueur 2 a gagné"
+	fin = 1
+	gagnant = 2
+	document.getElementById('recommencer').style.visibility ="visible"
+	}
+if (testi[1]+testi[5]+testi[9]==15){
+	document.getElementById('affichage').innerHTML = "Le Joueur 2 a gagné"
+	fin = 1
+	gagnant = 2
+	document.getElementById('recommencer').style.visibility ="visible"
+	}
+if (testi[3]+testi[5]+testi[7]==15){
+	document.getElementById('affichage').innerHTML = "Le Joueur 2 a gagné"
+	fin = 1
+	gagnant = 2
+	document.getElementById('recommencer').style.visibility ="visible"
+	}
+}
+function affichage(C) {
+if (C==0){
+	document.getElementById('affichage').innerHTML = "Jouer dans n'importe quel case non gagnée "
+	}
+if (C==1){
+	document.getElementById('affichage').innerHTML = "Jouer dans la case 1 (rose)"
+	}
+if (C==2){
+	document.getElementById('affichage').innerHTML = "Jouer dans la case 2 (jaune)"
+	}
+if (C==3){
+	document.getElementById('affichage').innerHTML = "Jouer dans la case 3 (violet)"
+	}
+if (C==4){
+	document.getElementById('affichage').innerHTML = "Jouer dans la case 4 (rouge)"
+	}
+if (C==5){
+	document.getElementById('affichage').innerHTML = "Jouer dans la case 5 (blanc)"
+	}
+if (C==6){
+	document.getElementById('affichage').innerHTML = "Jouer dans la case 6 (bleu foncé)"
+	}
+if (C==7){
+	document.getElementById('affichage').innerHTML = "Jouer dans la case 7 (bleu ciel)"
+	}
+if (C==8){
+	document.getElementById('affichage').innerHTML = "Jouer dans la case 8 (vert)"
+	}
+if (C==9){
+	document.getElementById('affichage').innerHTML = "Jouer dans la case 9 (orange)"
+	}
+}
+
+</script>
+<style type="text/css">
+
+.bouton1 {
+	height:60px;
+	width:60px;
+	background:#ff00ff;
+	visibility:visible;
+	}
+
+.bouton2 {
+	height:60px;
+	width:60px;
+	background:#F7FE2E;
+	visibility:visible;
+	}
+	
+.bouton3 {
+	height:60px;
+	width:60px;
+	background:#9A2EFE;
+	visibility:visible;
+	}
+	
+.bouton4 {
+	height:60px;
+	width:60px;
+	background:#FE2E2E;
+	visibility:visible;
+	}
+	
+.bouton5 {
+	height:60px;
+	width:60px;
+	background:#ffffff;
+	visibility:visible;
+	}
+	
+.bouton6 {
+	height:60px;
+	width:60px;
+	background:#2E64FE;;
+	visibility:visible;
+	}
+	
+.bouton7 {
+	height:60px;
+	width:60px;
+	background:#58FAF4;
+	visibility:visible;
+	}
+	
+.bouton8 {
+	height:60px;
+	width:60px;
+	background:#3ADF00;
+	visibility:visible;
+	}
+	
+.bouton9 {
+	height:60px;
+	width:60px;
+	background:#FF8000;
+	visibility:visible;
+	}
+	
+#case1 {
+	visibility:hidden;
+	z-index:1;
+	position:absolute;
+	left:104px;
+	top:104px;
+	}
+	
+#case2 {
+	visibility:hidden;
+	z-index:1;
+	position:absolute;
+	left:301px;
+	top:104px;
+	}
+	
+#case3 {
+	visibility:hidden;
+	z-index:1;
+	position:absolute;
+	left:498px;
+	top:104px;
+	}
+	
+#case4 {
+	visibility:hidden;
+	z-index:1;
+	position:absolute;
+	left:104px;
+	top:301px;
+	}
+	
+#case5 {
+	visibility:hidden;
+	z-index:1;
+	position:absolute;
+	left:301px;
+	top:301px;
+	}
+	
+#case6 {
+	visibility:hidden;
+	z-index:1;
+	position:absolute;
+	left:498px;
+	top:301px;
+	}
+	
+#case7 {
+	visibility:hidden;
+	z-index:1;
+	position:absolute;
+	left:104px;
+	top:498px;
+	}
+	
+#case8 {
+	visibility:hidden;
+	z-index:1;
+	position:absolute;
+	left:301px;
+	top:498px;
+	}
+	
+#case9 {
+	visibility:hidden;
+	z-index:1;
+	position:absolute;
+	left:498px;
+	top:498px;
+	}
+	
+
+#tableau{
+	z-index:0;
+	position:absolute;
+	left:100px;
+	top:100px;
+	}
+
+#titre {
+	color:#ad0c21;
+	font-family:Impact, fantasy;
+	text-decoration: underline;
+	font-size:x-large;
+	position:absolute;
+	left:300px;
+	top:40px;
+	}
+
+#affichage {
+	position:absolute;
+	left:900px;
+	top:300px;
+	font-size:18px;
+	}	
+	
+#recommencer{
+	position:absolute;
+	left:1000px;
+	top:600px;
+	visibility:hidden;
+	font-size:18px;
+	}
+#regle{
+	position:absolute;
+	left:1000px;
+	top:60px;
+	font-size:18px;
+	}
+	
+#tableaur{
+	position:absolute;
+	left:1000px;
+	top:100px;
+	font-size:18px;
+	
+</style>
+	<div id='titre'>MORPION ROYAL</div>
+	</head>	
+		<body leftmargin="150" topmargin="150" marginwidth="50%" marginheight="50%">
+		<div id='tableau'><table  border="1">
+	
+	<tr>
+		<td id="11"><input id="1-1" type="button" class="bouton1" onClick="clique(1,1)" /></td>
+		<td id="12"><input id="1-2" type="button" class="bouton1" onClick="clique(1,2)" /></td>
+		<td id="13"><input id="1-3" type="button" class="bouton1" onClick="clique(1,3)" /></td>
+		<td id="21"><input id="2-1" type="button" class="bouton2" onClick="clique(2,1)" /></td>
+		<td id="22"><input id="2-2" type="button" class="bouton2" onClick="clique(2,2)" /></td>
+		<td id="23"><input id="2-3" type="button" class="bouton2" onClick="clique(2,3)" /></td>
+		<td id="31"><input id="3-1" type="button" class="bouton3" onClick="clique(3,1)" /></td>
+		<td id="32"><input id="3-2" type="button" class="bouton3" onClick="clique(3,2)" /></td>
+		<td id="33"><input id="3-3" type="button" class="bouton3" onClick="clique(3,3)" /></td>
+	</tr>
+		
+		<tr>
+		<td id="14"><input id="1-4" type="button" class="bouton1" onClick="clique(1,4)" /></td>
+		<td id="15"><input id="1-5" type="button" class="bouton1" onClick="clique(1,5)" /></td>
+		<td id="16"><input id="1-6" type="button" class="bouton1" onClick="clique(1,6)" /></td>
+		<td id="24"><input id="2-4" type="button" class="bouton2" onClick="clique(2,4)" /></td>
+		<td id="25"><input id="2-5" type="button" class="bouton2" onClick="clique(2,5)" /></td>
+		<td id="26"><input id="2-6" type="button" class="bouton2" onClick="clique(2,6)" /></td>
+		<td id="34"><input id="3-4" type="button" class="bouton3" onClick="clique(3,4)" /></td>
+		<td id="35"><input id="3-5" type="button" class="bouton3" onClick="clique(3,5)" /></td>
+		<td id="36"><input id="3-6" type="button" class="bouton3" onClick="clique(3,6)" /></td>
+	</tr>
+	
+		<tr>
+		<td id="17"><input id="1-7" type="button" class="bouton1" onClick="clique(1,7)" /></td>
+		<td id="18"><input id="1-8" type="button" class="bouton1" onClick="clique(1,8)" /></td>
+		<td id="19"><input id="1-9" type="button" class="bouton1" onClick="clique(1,9)" /></td>
+		<td id="27"><input id="2-7" type="button" class="bouton2" onClick="clique(2,7)" /></td>
+		<td id="28"><input id="2-8" type="button" class="bouton2" onClick="clique(2,8)" /></td>
+		<td id="29"><input id="2-9" type="button" class="bouton2" onClick="clique(2,9)" /></td>
+		<td id="37"><input id="3-7" type="button" class="bouton3" onClick="clique(3,7)" /></td>
+		<td id="38"><input id="3-8" type="button" class="bouton3" onClick="clique(3,8)" /></td>
+		<td id="39"><input id="3-9" type="button" class="bouton3" onClick="clique(3,9)" /></td>
+	</tr>
+	
+		<tr>
+		<td id="41"><input id="4-1" type="button" class="bouton4" onClick="clique(4,1)" /></td>
+		<td id="42"><input id="4-2" type="button" class="bouton4" onClick="clique(4,2)" /></td>
+		<td id="43"><input id="4-3" type="button" class="bouton4" onClick="clique(4,3)" /></td>
+		<td id="51"><input id="5-1" type="button" class="bouton5" onClick="clique(5,1)" /></td>
+		<td id="52"><input id="5-2" type="button" class="bouton5" onClick="clique(5,2)" /></td>
+		<td id="53"><input id="5-3" type="button" class="bouton5" onClick="clique(5,3)" /></td>
+		<td id="61"><input id="6-1" type="button" class="bouton6" onClick="clique(6,1)" /></td>
+		<td id="62"><input id="6-2" type="button" class="bouton6" onClick="clique(6,2)" /></td>
+		<td id="63"><input id="6-3" type="button" class="bouton6" onClick="clique(6,3)" /></td>
+	</tr>
+	
+		<tr>
+		<td id="44"><input id="4-4" type="button" class="bouton4" onClick="clique(4,4)" /></td>
+		<td id="45"><input id="4-5" type="button" class="bouton4" onClick="clique(4,5)" /></td>
+		<td id="46"><input id="4-6" type="button" class="bouton4" onClick="clique(4,6)" /></td>
+		<td id="54"><input id="5-4" type="button" class="bouton5" onClick="clique(5,4)" /></td>
+		<td id="55"><input id="5-5" type="button" class="bouton5" onClick="clique(5,5)" /></td>
+		<td id="56"><input id="5-6" type="button" class="bouton5" onClick="clique(5,6)" /></td>
+		<td id="64"><input id="6-4" type="button" class="bouton6" onClick="clique(6,4)" /></td>
+		<td id="65"><input id="6-5" type="button" class="bouton6" onClick="clique(6,5)" /></td>
+		<td id="66"><input id="6-6" type="button" class="bouton6" onClick="clique(6,6)" /></td>
+	</tr>
+	
+	<tr>
+		<td id="47"><input id="4-7" type="button" class="bouton4" onClick="clique(4,7)" /></td>
+		<td id="48"><input id="4-8" type="button" class="bouton4" onClick="clique(4,8)" /></td>
+		<td id="49"><input id="4-9" type="button" class="bouton4" onClick="clique(4,9)" /></td>
+		<td id="57"><input id="5-7" type="button" class="bouton5" onClick="clique(5,7)" /></td>
+		<td id="58"><input id="5-8" type="button" class="bouton5" onClick="clique(5,8)" /></td>
+		<td id="59"><input id="5-9" type="button" class="bouton5" onClick="clique(5,9)" /></td>
+		<td id="67"><input id="6-7" type="button" class="bouton6" onClick="clique(6,7)" /></td>
+		<td id="68"><input id="6-8" type="button" class="bouton6" onClick="clique(6,8)" /></td>
+		<td id="69"><input id="6-9" type="button" class="bouton6" onClick="clique(6,9)" /></td>
+	</tr>
+	
+		<tr>
+		<td id="71"><input id="7-1" type="button" class="bouton7" onClick="clique(7,1)" /></td>
+		<td id="72"><input id="7-2" type="button" class="bouton7" onClick="clique(7,2)" /></td>
+		<td id="73"><input id="7-3" type="button" class="bouton7" onClick="clique(7,3)" /></td>
+		<td id="81"><input id="8-1" type="button" class="bouton8" onClick="clique(8,1)" /></td>
+		<td id="82"><input id="8-2" type="button" class="bouton8" onClick="clique(8,2)" /></td>
+		<td id="83"><input id="8-3" type="button" class="bouton8" onClick="clique(8,3)" /></td>
+		<td id="91"><input id="9-1" type="button" class="bouton9" onClick="clique(9,1)" /></td>
+		<td id="92"><input id="9-2" type="button" class="bouton9" onClick="clique(9,2)" /></td>
+		<td id="93"><input id="9-3" type="button" class="bouton9" onClick="clique(9,3)" /></td>
+	</tr>
+	
+		<tr>
+		<td id="74"><input id="7-4" type="button" class="bouton7" onClick="clique(7,4)" /></td>
+		<td id="75"><input id="7-5" type="button" class="bouton7" onClick="clique(7,5)" /></td>
+		<td id="76"><input id="7-6" type="button" class="bouton7" onClick="clique(7,6)" /></td>
+		<td id="84"><input id="8-4" type="button" class="bouton8" onClick="clique(8,4)" /></td>
+		<td id="85"><input id="8-5" type="button" class="bouton8" onClick="clique(8,5)" /></td>
+		<td id="86"><input id="8-6" type="button" class="bouton8" onClick="clique(8,6)" /></td>
+		<td id="94"><input id="9-4" type="button" class="bouton9" onClick="clique(9,4)" /></td>
+		<td id="95"><input id="9-5" type="button" class="bouton9" onClick="clique(9,5)" /></td>
+		<td id="96"><input id="9-6" type="button" class="bouton9" onClick="clique(9,6)" /></td>
+	</tr>
+	
+		<tr>
+		<td id="77"><input id="7-7" type="button" class="bouton7" onClick="clique(7,7)" /></td>
+		<td id="78"><input id="7-8" type="button" class="bouton7" onClick="clique(7,8)" /></td>
+		<td id="79"><input id="7-9" type="button" class="bouton7" onClick="clique(7,9)" /></td>
+		<td id="87"><input id="8-7" type="button" class="bouton8" onClick="clique(8,7)" /></td>
+		<td id="88"><input id="8-8" type="button" class="bouton8" onClick="clique(8,8)" /></td>
+		<td id="89"><input id="8-9" type="button" class="bouton8" onClick="clique(8,9)" /></td>
+		<td id="97"><input id="9-7" type="button" class="bouton9" onClick="clique(9,7)" /></td>
+		<td id="98"><input id="9-8" type="button" class="bouton9" onClick="clique(9,8)" /></td>
+		<td id="99"><input id="9-9" type="button" class="bouton9" onClick="clique(9,9)" /></td>
+	</tr>
+	</table>
+	</div>
+	<div id='case1'></div>
+	<div id='case2'></div>
+	<div id='case3'></div>
+	<div id='case4'></div>
+	<div id='case5'></div>
+	<div id='case6'></div>
+	<div id='case7'></div>
+	<div id='case8'></div>
+	<div id='case9'></div>
+	<div id="resultat"></div>
+	<div id="affichage"></div>
+	<a id="recommencer" href='morpionroyal.htm' >Recommencer une partie ?</a> 		<!--permet de relancer une partie-->
+	<a id='tableaur' href='tableau.htm' target='_new' >Score</a> 		<!--permet d'accéder au tableau des scores-->
+	<a id='regle' href='regledujeu.htm' target='_new' >Règle du jeu</a> 		<!--permet d'accéder au règle du jeu-->
+</html>
