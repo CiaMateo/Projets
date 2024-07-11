@@ -1,4 +1,5 @@
-# Bienvenue sur mon GitHub ! Je suis un développeur en début de carrière, encore en train d'acquérir de l'expérience. Cependant, ma motivation est sans limites, et j'ai hâte de relever de nouveaux défis pour enrichir mes compétences.
+# Bienvenue sur mon GitHub ! 
+Je suis un développeur en début de carrière, encore en train d'acquérir de l'expérience. Cependant, ma motivation est sans limites, et j'ai hâte de relever de nouveaux défis pour enrichir mes compétences.
 
 # Projets
 Exposition des différents projets réalisés
