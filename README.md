@@ -21,7 +21,7 @@ En 2023 j'ai eu l'opportunité de réalisé 2 sites web pour 2 clients différen
 https://neufchatel-sur-aisne.fr/les-medievales-de-neufchatel-sur-aisne/ 
 https://champagne-maison-huiban.fr/
 
-Il est possible que les sites est été modifié depuis mon passage en particulier les médiévales de neufchatel.
+Il est possible que les sites est été modifié depuis mon passage en particulier les médiévales de neufchatel qui est modifié presque chaque année.
 
 # Réalisation d'un CV site web
 
