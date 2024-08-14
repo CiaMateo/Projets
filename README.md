@@ -24,7 +24,7 @@ En 2023 j'ai eu l'opportunité de réalisé 2 sites web pour 2 clients différen
 
 https://champagne-maison-huiban.fr/
 
-https://neufchatel-sur-aisne.fr/les-medievales-de-neufchatel-sur-aisne/ 
+https://neufchatel-sur-aisne.fr/les-medievales-de-neufchatel-sur-aisne/#spectacles
 
 Il est possible que les sites est été modifié depuis mon passage en particulier les médiévales de neufchatel qui est modifié presque chaque année.
 
