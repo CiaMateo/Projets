@@ -20,7 +20,7 @@ Réalisé pendant mon troisième semestre de DUT informatique, il s'agit d'un si
 
 # Réalisation de site Web
 
-En 2023 j'ai eu l'opportunité de réalisé 2 sites web pour 2 clients différents : 
+En 2023 j'ai eu l'opportunité de réalisé 2 sites web pour 2 clients différents en parallèle de la maintenance à effectuer sur les 30+ autres sites d'Elhem : 
 
 https://champagne-maison-huiban.fr/
 
