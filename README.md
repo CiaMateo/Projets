@@ -23,6 +23,7 @@ Réalisé pendant mon troisième semestre de DUT informatique, il s'agit d'un si
 En 2023 j'ai eu l'opportunité de réalisé 2 sites web pour 2 clients différents en parallèle de la maintenance à effectuer sur les 30+ autres sites d'Elhem : 
 
 https://champagne-maison-huiban.fr/
+![image](https://github.com/user-attachments/assets/1c40d031-1544-4748-9436-de2581428672)
 
 https://neufchatel-sur-aisne.fr/les-medievales-de-neufchatel-sur-aisne/#spectacles
 
