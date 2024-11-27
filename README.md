@@ -13,7 +13,7 @@ https://neufchatel-sur-aisne.fr/les-medievales-de-neufchatel-sur-aisne/#spectacl
 
 ![Capture d'écran 2024-11-27 170330](https://github.com/user-attachments/assets/5767c89e-65e8-4c50-94b9-9ee1fd19824f)
 
-Il est possible que les sites est été légèrement modifié depuis mon départ.
+Il est possible que les sites est été modifié depuis mon départ.
 
 # Projets
 Exposition des différents projets réalisés
