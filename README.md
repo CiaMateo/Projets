@@ -38,4 +38,4 @@ J'ai décidé Pendant une période de creux de ne pas perdre la main et de réla
 
 http://mateociajolo.surge.sh/
 
-Si vous avez la moindre questions n'hésité pas à me contacter : mateo.ciajolo@gmail.fr
+Si vous avez la moindre questions n'hésitez pas à me contacter : mateo.ciajolo@gmail.fr
