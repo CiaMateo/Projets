@@ -11,6 +11,7 @@ Le but était de créer un site web Mobile Friendly et développer en React pour
 
 <img src="https://github.com/user-attachments/assets/65c84d6b-f8bf-4d4a-9994-df941cdb4ee1" alt="Mobile" width="200"/>
 
+
 Ce site web a pour but d'être une méthode d'entraînement à l'apprentissage des délais de récupération des capacités ultimes de chaque personnage du jeu.
 Il a été convenu de créer une sorte de jeu avec une gestion d'aléatoire optimisé, un historique, mais surtout créer une interface fluide.
 Si vous aussi vous souhaitez tester vos connaissances sur League Of Legends, voici le lien : https://championguess-19ee5.web.app/
