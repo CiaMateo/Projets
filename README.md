@@ -1,7 +1,7 @@
 # Bienvenue sur mon GitHub ! 
 Je suis un développeur en début de carrière, encore en train d'acquérir de l'expérience. Cependant, ma motivation est sans limites, et j'ai hâte de relever de nouveaux défis pour enrichir mes compétences.
 
-# Site Web Free-lance
+# Guess The Ultimate, projet Free-lance
 
 En décembre 2024, j'ai été contacté par un joueur professionnel de League Of Legends, qui avait une idée de site bien précis pour améliorer ses compétences.
 
