@@ -3,10 +3,13 @@ Je suis un développeur en début de carrière, encore en train d'acquérir de l
 
 # Site Web Free-lance
 
-![GuessTheUltimate](https://github.com/user-attachments/assets/71707b9c-70c0-48bf-8486-a1b5d0016ce6)
 En décembre 2024, j'ai été contacté par un joueur professionnel de League Of Legends, qui avait une idée de site bien précis pour améliorer ses compétences.
+
+![GuessTheUltimate](https://github.com/user-attachments/assets/71707b9c-70c0-48bf-8486-a1b5d0016ce6)
+
 Le but était de créer un site web Mobile Friendly et développer en React pour minimiser le nombre de mise à jour dans le temps. 
-![MobielVersion](https://github.com/user-attachments/assets/65c84d6b-f8bf-4d4a-9994-df941cdb4ee1)
+
+<img src="[drawing.jpg](https://github.com/user-attachments/assets/65c84d6b-f8bf-4d4a-9994-df941cdb4ee1)" alt="Mobile" width="200"/>
 
 Ce site web a pour but d'être une méthode d'entraînement à l'apprentissage des délais de récupération des capacités ultimes de chaque personnage du jeu.
 Il a été convenu de créer une sorte de jeu avec une gestion d'aléatoire optimisé, un historique, mais surtout créer une interface fluide.
