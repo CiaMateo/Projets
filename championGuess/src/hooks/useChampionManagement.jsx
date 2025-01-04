@@ -57,7 +57,19 @@ function useChampionManagement() {
         )
         .then((res) => {
           const dataChampion = res.data;
-          setChampionCooldown(dataChampion.data[championId].spells[3].cooldown);
+          if (dataChampion.data[championId].spells[3].cooldown.length === 1) {
+            const updateTable = [];
+            for (let i = 0; i < 3; i++) {
+              updateTable.push(
+                dataChampion.data[championId].spells[3].cooldown[0]
+              );
+            }
+            setChampionCooldown(updateTable);
+          } else {
+            setChampionCooldown(
+              dataChampion.data[championId].spells[3].cooldown
+            );
+          }
         })
         .catch((error) => {
           console.error("Error fetching champion data:", error);
@@ -67,7 +79,7 @@ function useChampionManagement() {
 
   //Fonction de sélection d'un personnage optimisant l'aléatoire
   const setRandomChampion = () => {
-    const random = Math.floor(Math.random() * 100);
+    const random = Math.floor(Math.random() * championListNotGuessYet.length);
     let randomChampion;
     // Cas où il ne reste qu'un seul champion possible
     if (
@@ -97,6 +109,7 @@ function useChampionManagement() {
       championListNotGuessYet.length === 0
     ) {
       setRestart(true);
+      return;
     }
     //Cas où la liste de personnage trouvé est vide
     else if (championListGuessRightOneTime.length === 0) {
@@ -107,7 +120,7 @@ function useChampionManagement() {
       let randomAlreadyGuess = Math.floor(
         Math.random() * championListGuessRightOneTime.length
       );
-      randomChampion = championListNotGuessYet[randomAlreadyGuess];
+      randomChampion = championListGuessRightOneTime[randomAlreadyGuess];
     }
     // Il y a des personnages dans les 2 listes
     else {
