@@ -9,7 +9,7 @@ En décembre 2024, j'ai été contacté par un joueur professionnel de League Of
 
 Le but était de créer un site web Mobile Friendly et développer en React pour minimiser le nombre de mise à jour dans le temps. 
 
-<img src="https://github.com/user-attachments/assets/65c84d6b-f8bf-4d4a-9994-df941cdb4ee1" alt="Mobile" width="200"/>
+<img src="https://github.com/user-attachments/assets/4fe0af26-82f8-4f87-94af-14cc55515275" alt="Mobile" width="200"/>
 
 
 Ce site web a pour but d'être une méthode d'entraînement à l'apprentissage des délais de récupération des capacités ultimes de chaque personnage du jeu.
