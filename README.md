@@ -5,7 +5,7 @@ Je suis un développeur en début de carrière, encore en train d'acquérir de l
 
 En décembre 2024, j'ai été contacté par un joueur professionnel de League Of Legends, qui avait une idée de site bien précis pour améliorer ses compétences.
 
-![GuessTheUltimate](https://github.com/user-attachments/assets/9531d1a9-2f87-42f5-bc6f-f777e9d0f634)
+![guess](https://github.com/user-attachments/assets/51876cc8-b65d-450b-b456-7d9e29e45760)
 
 Le but était de créer un site web Mobile Friendly et développer en React pour minimiser le nombre de mise à jour dans le temps. 
 
